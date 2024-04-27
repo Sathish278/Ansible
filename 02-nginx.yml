@@ -1,4 +1,3 @@
----
 - name: install nginx
   hosts: web
   become: yes # equal to -b in adhoc command(getting root access)
