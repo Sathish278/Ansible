@@ -4,3 +4,9 @@
   - name: printing vars from inventory
     debug:
       msg: "My name is  {{uname}} and age is {{age}}"
+- name: vars from web
+  hosts: web
+  tasks:
+  - name: printing vars from inventory
+    debug:
+      msg: "My name is  {{uname}} and age is {{age}}"
