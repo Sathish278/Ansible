@@ -2,7 +2,12 @@
 - name: Install Nginx on CentOS/RHEL/Fedora
   hosts: web
   become: yes  # This allows Ansible to escalate privileges and become root
-  
+  tasks:
+  - name: installing nginx
+    ansible.builtin.dnf:
+    name: nginx
+    state: installed
+     
       tasks:
     - name: Install Nginx
       dnf:
