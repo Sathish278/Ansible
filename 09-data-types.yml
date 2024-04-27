@@ -51,7 +51,32 @@
         - - name: John
             age: 30       # List of dictionaries
 
+    #  Task to display undefined value
+    # - name: Display Undefined Value
+    #   debug:
+    #     msg: "{{ undefined_value }}"  # Print the value of the undefined variable
     # Task to display undefined value
     - name: Display Undefined Value
       debug:
-        msg: "{{ undefined_value }}"  # Print the value of the undefined variable
+        msg: "{{ undefined_value | default('null') }}"  # Print the value of the undefined variable
+
+- name: data types
+  hosts: web
+  vars:
+    course: Devops with allows #String
+    tools: #list
+    - linux
+    - shell
+    - ansible
+    experience: #map
+     Devops: 2 #number
+     AWS: 2
+     docker: 1
+    RealProject: true #boolean
+  tasks: 
+  - name: printing variables
+    debug:
+      msg: "{{course}},{{tools}},{{experience}},{{RealProject}}"
+
+
+

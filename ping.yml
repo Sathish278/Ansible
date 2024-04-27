@@ -1,9 +1,21 @@
-- name: Ping servers
-  hosts: localhost
-  tasks:
-  - name: Ping the server
-    ansible.builtin.debug:
-      msg: "Hello I am from Play-1 and Task-1"
-  - name : ping
-    ansible.builtin.ping:
+---
+- name: data types
+  hosts: web
+  vars:
+    course: Devops with allows #String
+    tools: #list
+    - linux
+    - shell
+    - ansible
+    experience: #map
+     Devops: 2 #number
+     AWS: 2
+     docker: 1
+    RealProject: true #boolean
+  tasks: 
+  - name: printing variables
+    debug:
+      msg: "{{course}},{{tools}},{{experience}},{{RealProject}}"
+
+
 
