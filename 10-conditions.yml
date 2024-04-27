@@ -11,4 +11,4 @@
       msg: "user info:{{USER}}"
   - name: create user
     ansible.builtin.command: useradd expense
-    When: USER.rc != 0 #condition
+    when: USER.rc != 0 #condition
