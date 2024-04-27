@@ -9,7 +9,7 @@
 - name: variables from files
   hosts: localhost
   vars_files:
-  - vars.yaml
+  - vars.yml
   tasks:
   - name: print override information
     ansible.builtin.debug:
