@@ -2,7 +2,7 @@
 - name: vars called from vars.yml
   hosts: localhost
   vars_files:
-   - vars.yml
+  - vars.yml
   tasks:
   - name: variables decleared in vars.yml
     ansible.builtin.debug:
