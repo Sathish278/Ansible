@@ -1,0 +1,9 @@
+---
+- name: vars from args # give args while running the script
+  hosts: localhost
+  tasks:
+  - name: printing info
+    debug:
+     msg: "my name is {{name}}, age is {{age}}"
+#ansible-playbook 08-vars-from-args -e name=sathishreddy -e age=22
+#ansible-playbook 08-vars-from-args -e "name=sathishreddy age=22"
