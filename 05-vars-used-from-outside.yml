@@ -7,3 +7,7 @@
    - name: variables decleared in vars.yml
      ansible.builtin.debug:
       msg: "My name is {{firstname}} {{name}}{{lastname}} and age is {{age}}"
+  tasks:
+   - name: printing variables
+     ansible.builtin.debug:
+      msg: "This course is {{course}}, on {{date}}, duration is {{ duration}}"
