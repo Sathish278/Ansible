@@ -1,5 +1,5 @@
 - name: install nginx
-  hosts: all
+  hosts: web
   become: yes # equal to -b in adhoc command(getting root access)
   tasks:
   -name: update cache
