@@ -3,10 +3,10 @@
   become: yes # equal to -b in adhoc command(getting root access)
   tasks:
   -name: update cache
-    dnf:
+    yum:
       update_cache: yes
   - name: installing nginx
-    dnf:
+    yum:
       name: nginx
       state: installed
   - name: enable service
