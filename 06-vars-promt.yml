@@ -1,13 +1,13 @@
 ---
 - name: vars from promt
   hosts: localhost
-  vars_prompt:
+  vars_prompt: #user need to enter while executing the script
   - name: Username
     prompt: please enter your username
-    private: false
+    private: false 
   - name: Password
     prompt: please enter your password
-    private: true
+    private: true #password won't display while entering
   tasks:
   - name: printing information
     ansible.builtin.debug:

@@ -1,0 +1,7 @@
+---
+- name: Vars from inventory
+  hosts: localhost
+  tasks:
+  - name: printing vars from inventory
+    debug:
+      msg: "My name is  {{name}} and age is {{age}}"
