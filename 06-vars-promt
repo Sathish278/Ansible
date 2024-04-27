@@ -10,5 +10,5 @@
     pravite: true
   tasks:
   - name: printing information
-    ansible.builtin.degub:
+    ansible.builtin.debug:
       msg: "your Username:{{Username}}. And Password:{{Password}}
