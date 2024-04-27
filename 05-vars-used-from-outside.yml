@@ -1,3 +1,4 @@
+---
 - name: vars called from vars.yml
   hosts: localhost
   vars_files:
