@@ -2,6 +2,6 @@
   hosts: localhost
   tasks:
     - name: Ping the server
-      debug: 
-        msg: "pinging local host server"
-      ping:
+      ansible.builtin.debug:
+        msg: "Hello I am from Play-1 and Task-1"
+      ansible.builtin.ping:
