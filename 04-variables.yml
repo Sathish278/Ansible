@@ -22,4 +22,4 @@
   tasks:
    - name: printing variables
      ansible.builtin.debug:
-      msg: "This course is {{course}}, on {{date}}, duration is{{ duration}}"
+      msg: "This course is {{course}}, on {{date}}, duration is {{ duration}}"
