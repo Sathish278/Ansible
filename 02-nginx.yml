@@ -8,8 +8,4 @@
     name: nginx
     state: installed
      
-      tasks:
-    - name: Install Nginx
-      dnf:
-        name: nginx
-        state: present
+     
