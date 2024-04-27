@@ -6,5 +6,12 @@
   tasks:
   - name: variables decleared in vars.yml
     ansible.builtin.debug:
-     msg: "My name is {{firstname}} {{name}}{{lastname}} and age is {{age}}"
-  
+      msg: "My name is {{firstname}} {{name}}{{lastname}} and age is {{age}}"
+- name: variables from files
+  hosts: localhost
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: print override information
+    ansible.builtin.debug:
+      msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
