@@ -1,16 +1,9 @@
-- name: install nginx
+---
+- name: Install Nginx on CentOS/RHEL/Fedora
   hosts: localhost
-  become: yes # equal to -b in adhoc command(getting root access)
+  become: yes  # This allows Ansible to escalate privileges and become root
   tasks:
-  -name: update cache
-    yum:
-      update_cache: yes
-  - name: installing nginx
-    yum:
-      name: nginx
-      state: installed
-  - name: enable service
-    service:
-      name: nginx
-      state: started
-      enable: yes
+    - name: Install Nginx
+      yum:
+        name: nginx
+        state: present
