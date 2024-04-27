@@ -1,4 +1,3 @@
----
 - name: Play-1
   hosts: localhost
   tasks:
