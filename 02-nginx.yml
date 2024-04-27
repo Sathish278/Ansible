@@ -4,7 +4,7 @@
   become: yes  # This allows Ansible to escalate privileges and become root
   tasks:
     - name: Install Nginx
-      yum:
+      dnf:
         name: nginx
         state: present
       
