@@ -4,4 +4,6 @@
   - name: Ping the server
     ansible.builtin.debug:
       msg: "Hello I am from Play-1 and Task-1"
+  - name : ping
     ansible.builtin.ping:
+
