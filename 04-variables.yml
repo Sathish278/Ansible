@@ -1,0 +1,25 @@
+---
+- name: Example Playbook
+  hosts: all
+  vars:   #variable decleration
+    global_var: "This is a global variable"  #this is global level variable
+  tasks:
+    - name: Task 1
+      debug:
+        msg: "{{ global_var }}"
+
+    - name: Task 2
+      vars:
+        task_var: "This is a task variable" #this is local or task level variable
+      debug:
+        msg: "{{ task_var }}"
+- name: variables
+  hosts: localhost
+  vars: 
+    course: Ansible
+    date: 27-April-2024-IST
+    duration: 2 weeks
+  tasks:
+    - name: printing variables
+      ansible.builtin.debug:
+        msg: "This course is {{course}}, on {{date}}, duration is{{duration}}"

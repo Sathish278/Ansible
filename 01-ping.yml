@@ -1,0 +1,9 @@
+---
+- name: ping servers
+  hosts: web
+  tasks: #list of task/modules/collections
+  - name: pinging server
+    ansible.builtin.ping:
+
+#ansible-playbook -i inventory.ini -e ansible_user=ec3-user ansible_password=DevOps321 01-ping.yml(filename)
+---
