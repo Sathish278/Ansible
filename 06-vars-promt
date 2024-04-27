@@ -1,0 +1,14 @@
+---
+- name: vars from promt
+  hosts: localhost
+  vars_promt:
+  - name: Username
+    promt: please enter your username
+    pravite: false
+  - name: Password
+    promt: please enter your password
+    pravite: true
+  tasks:
+  - name: printing information
+    ansible.builtin.degub:
+      msg: "your Username:{{Username}}. And Password:{{Password}}
