@@ -1,12 +1,12 @@
 ---
 - name: vars from promt
   hosts: localhost
-  vars_promt:
+  vars_prompt:
   - name: Username
-    promt: please enter your username
+    prompt: please enter your username
     pravite: false
   - name: Password
-    promt: please enter your password
+    prompt: please enter your password
     pravite: true
   tasks:
   - name: printing information
