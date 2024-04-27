@@ -1,8 +1,16 @@
-- name: variables from files
+- name: vars called from vars.yml
   hosts: localhost
   vars_files:
   - vars.yml
   tasks:
+  - name: variables decleared in vars.yml
+    ansible.builtin.debug:
+      msg: "My name is {{firstname}} {{name}}{{lastname}} and age is {{age}}"
+- name: variables from files
+  hosts: localhost
+  vars_files:
+  - vars.yaml
+  tasks:
   - name: print override information
     ansible.builtin.debug:
-      msg: "Hi, We are learning {{firstname}} from Trainer {{name}}, Duration is {{Age}}."
+      msg: "Hi, We are learning {{firstname}} from Trainer {{name}}, Duration is {{age}}."
