@@ -1,3 +1,4 @@
+---
 - name: PLAY1-1
   hosts: localhost
   tasks:
