@@ -2,5 +2,5 @@
   hosts: localhost
   tasks:
   - name: printing vars from inventory
-    debug:
+    ansible.builtin.debug:
       msg: "My name is  {{uname}} and age is {{age}}"
