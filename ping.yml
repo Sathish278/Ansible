@@ -2,7 +2,7 @@
 - name: data types
   hosts: web
   vars:
-    course: Devops with allows #String
+    course: Devops with AWS #String
     tools: #list
     - linux
     - shell
