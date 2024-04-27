@@ -1,7 +1,7 @@
 ---
 - name: vars called from vars.yml
   hosts: localhost
-  vars:
+  vars_files:
    - vars.yml
   tasks:
    - name: variables decleared in vars.yml
