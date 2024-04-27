@@ -7,4 +7,4 @@
       yum:
         name: nginx
         state: present
-        enable: yes
+      
