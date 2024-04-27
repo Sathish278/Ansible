@@ -1,6 +1,6 @@
 ---
 - name: Example Playbook
-  hosts: all
+  hosts: web
   vars:   #variable decleration
     global_var: "This is a global variable"  #this is global level variable
   tasks:
