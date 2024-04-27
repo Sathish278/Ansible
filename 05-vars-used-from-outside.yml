@@ -4,6 +4,6 @@
   vars:
     - vars.yml
   tasks:
-    - name: variables decleared in vars.yml
-      ansible.builtin.debug:
-        msg: "My name is {{firstname}} {{name}}{{lastname}} and age is {{age}}"
+   - name: variables decleared in vars.yml
+    ansible.builtin.debug:
+      msg: "My name is {{firstname}} {{name}}{{lastname}} and age is {{age}}"
