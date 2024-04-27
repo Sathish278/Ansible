@@ -7,7 +7,7 @@
     ansible.builtin.dnf:
      name: nginx
      state: installed
-  -name: starting nginx
+  - name: starting nginx
     ansible.builtin.service:
      name: nginx
      state: started
