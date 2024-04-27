@@ -2,5 +2,6 @@
   hosts: localhost
   tasks:
     - name: Ping the server
-      debug: "pinging local host server"
+      debug: 
+        msg: "pinging local host server"
       ping:
