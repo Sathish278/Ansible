@@ -3,4 +3,4 @@
   tasks:
   - name: printing vars from inventory
     debug:
-      msg: "My name is  {{name}} and age is {{age}}"
+      msg: "My name is  {{uname}} and age is {{age}}"
