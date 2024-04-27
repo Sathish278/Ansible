@@ -1,0 +1,78 @@
+---
+# Define the name of the playbook
+- name: Example Ansible Playbook
+
+  # Specify the target hosts or groups
+  hosts: localhost
+  
+  # Define the tasks to be executed
+  tasks:
+    # Task to display strings
+    - name: Display Strings
+      debug:
+        msg: "{{ item }}"  # Print the value of the item
+      loop:
+        - "hello"   # Double-quoted string
+        - 'world'   # Single-quoted string
+        - example   # Unquoted string
+
+    # Task to display numbers
+    - name: Display Numbers
+      debug:
+        msg: "{{ item }}"  # Print the value of the item
+      loop:
+        - 42        # Integer
+        - 3.14      # Floating-point number
+
+    # Task to display booleans
+    - name: Display Booleans
+      debug:
+        msg: "{{ item }}"  # Print the value of the item
+      loop:
+        - true      # True boolean
+        - false     # False boolean
+        - yes       # Equivalent to true
+        - no        # Equivalent to false
+
+    # Task to display lists
+    - name: Display Lists
+      debug:
+        msg: "{{ item }}"  # Print the value of the item
+      loop:
+        - [item1, item2, item3]  # List of strings
+        - [1, 2, 3, 4, 5]         # List of integers
+
+    # Task to display dictionaries
+    - name: Display Dictionaries
+      debug:
+        msg: "{{ item }}"  # Print the value of the item
+      loop:
+        - { key1: value1, key2: value2, key3: value3 }  # Dictionary with string keys and values
+        - - name: John
+            age: 30       # List of dictionaries
+
+    # Task to display undefined value
+    - name: Display Undefined Value
+      debug:
+        msg: "{{ undefined_value }}"  # Print the value of the undefined variable
+
+- name: data types
+  hosts: web
+  vars:
+    course: Devops with allows #String
+    tools: #list
+    - linux
+    - shell
+    - ansible
+    experience: #map
+     Devops: 2 #number
+     AWS: 2
+     docker: 1
+    RealProject: true #boolean
+  tasks: 
+  - name: printing variables
+    debug:
+      msg: "{{course}},{{tools}},{{experience}},{{RealProject}}"
+
+
+
