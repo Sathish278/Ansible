@@ -21,6 +21,6 @@
       name: "{{item.name}}"
       state: "{{item.state}}"
     loop:
-      - {{name: mysql, state:present}}
-      - {{name: postfix, state:absent}}
-      - {{name: nginx, state:absent}}
+      - {{name: mysql, state: present}}
+      - {{name: postfix, state: absent}}
+      - {{name: nginx, state: absent}}
