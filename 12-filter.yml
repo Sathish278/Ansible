@@ -28,4 +28,4 @@
   tasks:
   - name: print unique numbers
     ansible.builtin.debug:
-      msg: " {{number|unique}}"
+      msg: " {{number | unique}}"
