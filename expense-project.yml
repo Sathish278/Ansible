@@ -1,0 +1,12 @@
+---
+- name: expense project
+  hosts: db 
+  tasks:
+  - name: inatalling mysql server
+    ansible.builtin.dnf:
+      name: mysql-server
+      state: latest
+  - name: starting and enabling mysql server
+    ansible.builtin.service:
+      state: started
+      enbaled: yes
