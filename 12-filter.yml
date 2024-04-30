@@ -4,4 +4,10 @@
   tasks:
   - name: print default value
     ansible.builtin.debug:
-      msg: "I want tp print my name for this variable{{name | default ('Sathish Reddy')}}"
+      msg: "I want to print my name for this variable{{name | default (' Sathish Reddy')}}"
+- name: upper case
+  hosts: localhost
+  tasks:
+  - name: print given text in upper case
+    ansible.builtin.debug:
+      msg: " Ambati sathish | upper"
