@@ -9,8 +9,9 @@
       state: latest
   - name: starting and enabling mysql server
     ansible.builtin.service:
-      state: started
+      service: started
       enbaled: yes
+
   - name: installing python dependencies for mysql server
     ansible.builtin.pip:
       name:
