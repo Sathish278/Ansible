@@ -7,7 +7,9 @@
       msg: "I want to print my name for this variable{{name | default (' Sathish Reddy')}}"
 - name: upper case
   hosts: localhost
+  vars: 
+    name: Ambati Sathish
   tasks:
   - name: print given text in upper case
     ansible.builtin.debug:
-      msg: " Ambati sathish | upper"
+      msg: "{{name | upper}}"
