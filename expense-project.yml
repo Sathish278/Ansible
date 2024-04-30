@@ -1,6 +1,7 @@
 ---
 - name: expense project
   hosts: db 
+  become: yes
   tasks:
   - name: inatalling mysql server
     ansible.builtin.dnf:
@@ -10,3 +11,21 @@
     ansible.builtin.service:
       state: started
       enbaled: yes
+  - name: installing python dependencies for mysql server
+    ansible.builtin.pip:
+      name:
+      - PyMySQL
+      - cryptography
+      executable: pip3.9
+# check if password is alread setup or not
+  - name: check DB connection
+    community.mysql.mysql_info:
+      login_user: root
+      login_password: ExpenseApp@1
+      login_host: "{{login_host}}"
+      filter: version
+    ignore_error: yes
+    register: mysql_connection_output
+  - name: print output 
+    ansible.builtin.debug:
+      msg: "output: {{mysql_connection_output}}"
