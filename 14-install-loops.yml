@@ -11,3 +11,16 @@
       - mysql
       - postfix
       - nginx
+
+- name: installing packages
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: installing
+    ansible.builtin.dnf:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
+    loop:
+      - {{name: mysql, state:present}}
+      - {{name: postfix, state:absent}}
+      - {{name: nginx, state:absent}}
