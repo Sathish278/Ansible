@@ -92,8 +92,8 @@
             - default: Set a default value if a variable is not defined or is undefined.
               Example: "{{ my_variable | default('default_value') }}"
 
-            - dquote: Surround a string with double quotes.
-              Example: "{{ 'hello' | dquote }}"
+            - quote: Surround a string with double quotes.
+              Example: "{{ 'hello' | quote }}"
 
             - dict2items: Convert a dictionary to a list of key-value pairs.
               Example: "{{ {'key': 'value'} | dict2items }}"
