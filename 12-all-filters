@@ -85,9 +85,7 @@
         msg: |
           Filters (Part 2):
 
-            - default: Set a default value if a variable is not defined or is undefined.
-              Example: "{{ my_variable | default('default_value') }}"
-
+          
             - quote: Surround a string with double quotes.
               Example: "{{ 'hello' | quote }}"
 
