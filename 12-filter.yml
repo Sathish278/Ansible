@@ -21,3 +21,11 @@
   - name: print given text in lower case
     ansible.builtin.debug:
       msg: "{{name | lower}}"
+  
+- name: remove duplicates
+  hosts: localhost
+  number: [ 1, 2, 3, 2, 4, 5, 1]
+  tasks:
+  - name: print unique numbers
+    ansible.builtin.debug:
+      msg: " {{number|unique}}"
