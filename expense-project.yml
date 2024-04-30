@@ -11,7 +11,7 @@
     ansible.builtin.service:
       name: mysqld
       service: started
-      enbaled: yes
+      enabled: yes
 
   - name: installing python dependencies for mysql server
     ansible.builtin.pip:
