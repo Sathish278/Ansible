@@ -1,0 +1,29 @@
+---
+- name: Loop Examples
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Loop with loop keyword
+      debug:
+        msg: "Item: {{ item }}"
+      loop:
+        - Apple
+        - Banana
+        - Orange
+
+    - name: Loop with with_items keyword
+      debug:
+        msg: "Item: {{ item }}"
+      with_items:
+        - Apple
+        - Banana
+        - Orange
+
+    - name: Loop over a list of dictionaries
+      debug:
+        msg: "Name: {{ item.name }}, Age: {{ item.age }}"
+      loop:
+        - { name: Alice, age: 30 }
+        - { name: Bob, age: 25 }
+        - { name: Charlie, age: 35 }
+

@@ -80,11 +80,20 @@
             - xmlattr: Convert a dictionary to XML attribute format.
               Example: "{{ {'key': 'value'} | xmlattr }}"
 
+            # Add more filters with examples similarly...
+
     - name: Display Filters with Examples (Part 2)
       debug:
         msg: |
           Filters (Part 2):
+            - difference: Calculate the difference between two lists.
+              Example: "{{ [1, 2, 3] | difference([3, 4, 5]) }}"
 
+            - default: Set a default value if a variable is not defined or is undefined.
+              Example: "{{ my_variable | default('default_value') }}"
+
+            - quote: Surround a string with double quotes.
+              Example: "{{ 'hello' | quote }}"
 
             - dict2items: Convert a dictionary to a list of key-value pairs.
               Example: "{{ {'key': 'value'} | dict2items }}"
@@ -143,6 +152,7 @@
             - rejectattr: Remove items from a list of dictionaries based on a condition.
               Example: "{{ [{'name': 'Alice', 'age': 20}, {'name': 'Bob', 'age': 30}] | rejectattr('age', '>=', 25) }}"
 
+            # Add more filters with examples similarly...
 - hosts: localhost
   gather_facts: no
   tasks:
@@ -213,3 +223,4 @@
             - xmlattr: Convert a dictionary to XML attribute format.
               Example: "{{ {'key': 'value'} | xmlattr }}"
 
+            # Add more filters with examples similarly...
