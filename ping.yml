@@ -3,7 +3,7 @@
   tasks:
     - name: Display Filters with Examples (Part 3)
       debug:
-        msg: |
+        msg: 
           Filters (Part 3):
             - random: Select a random item from a list.
               Example: "{{ ['a', 'b', 'c'] | random }}"
@@ -48,7 +48,7 @@
               Example: "{{ 'hello world' | title }}"
 
             - to_datetime: Convert a string to a datetime object.
-              Example: "{{ '2022-04-20' | to_datetime }}"
+              Example: "{{ '2022-04-20T00:00:00' | to_datetime('%Y-%m-%dT%H:%M:%S') }}"
 
             - to_json: Convert a variable to a JSON string.
               Example: "{{ {'key': 'value'} | to_json }}"
