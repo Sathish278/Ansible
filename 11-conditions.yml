@@ -1,4 +1,3 @@
----
 - name: Number is greater than or equal to 10
   hosts: localhost
   vars_prompt:
