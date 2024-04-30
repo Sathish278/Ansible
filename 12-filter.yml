@@ -38,4 +38,16 @@
   tasks:
   - name: print min and max
     ansible.builtin.debug:
-      msg: "{{ number|min }},{{number|max}}"
+      msg: "min num is {{ number|min }},max num is {{number|max}}"
+
+- name: convert dictonary to list/item
+  hosts: localhost
+  vars:
+    mydic:
+      name: Sathish
+      age: 22
+      place: hyd
+  tasks:
+  - name: dictonary to list/item
+    ansible.builtin.debug:
+      msg: "{{mydic| dict2items}}"
