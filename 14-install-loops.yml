@@ -9,5 +9,5 @@
       state: latest
     loop:
       - mysql
-      - prefix
+      - postfix
       - nginx
