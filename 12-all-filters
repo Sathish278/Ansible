@@ -84,8 +84,8 @@
       debug:
         msg: |
           Filters (Part 2):
-            - difference: Calculate the difference between two lists.
-              Example: "{{ [1, 2, 3] | difference([3, 4, 5]) }}"
+            # - difference: Calculate the difference between two lists.
+            #   Example: "{{ [1, 2, 3] | difference([3, 4, 5]) }}"
 
             - default: Set a default value if a variable is not defined or is undefined.
               Example: "{{ my_variable | default('default_value') }}"
