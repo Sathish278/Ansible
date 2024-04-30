@@ -1,21 +1,21 @@
----
-- name: data types
-  hosts: web
-  vars:
-    course: Devops with AWS #String
-    tools: #list
-    - linux
-    - shell
-    - ansible
-    experience: #map
-     Devops: 2 #number
-     AWS: 2
-     docker: 1
-    RealProject: true #boolean
-  tasks: 
-  - name: printing variables
-    debug:
-      msg: "{{course}},{{tools}},{{experience}},{{RealProject}}"
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Display Filters with Examples (Part 3)
+      debug:
+        msg: |
+          Filters (Part 3):
+            - random: Select a random item from a list.
+              Example: "{{ ['a', 'b', 'c'] | random }}"
 
+            - reject: Remove items from a list based on a condition.
+              Example: "{{ [1, 2, 3, 4, 5] | reject('even') }}"
 
+            - rejectattr: Remove items from a list of dictionaries based on a condition.
+              Example: "{{ users | rejectattr('age', '>=', 18) }}"
 
+            - replace: Replace occurrences of a string with another string.
+              Example: "{{ 'hello world' | replace('world', 'universe') }}"
+
+            - reverse: Reverse the order of a list or a string.
+              Example: "{{ [1, 2, 3] | reverse }}"
