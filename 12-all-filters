@@ -60,7 +60,7 @@
               Example: "{{ 'hello world' | title }}"
 
             - to_datetime: Convert a string to a datetime object.
-              Example: "{{ '2022-04-20' | to_datetime }}"
+              Example: "{{ '2022-04-20' | to_datetime('%Y-%m-%d') }}"
 
             - to_json: Convert a variable to a JSON string.
               Example: "{{ {'key': 'value'} | to_json }}"
