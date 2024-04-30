@@ -1,0 +1,161 @@
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Display Filters with Examples
+      debug:
+        msg: |
+          Filters:
+            - abs: Calculate the absolute value of a number.
+              Example: "{{ my_number | abs }}"
+
+            - bool: Convert the value to a boolean.
+              Example: "{{ my_variable | bool }}"
+
+            - capitalize: Convert the first character of a string to uppercase.
+              Example: "{{ my_string | capitalize }}"
+
+            - default: Set a default value if a variable is not defined or is undefined.
+              Example: "{{ my_variable | default('default_value') }}"
+
+            - join: Join a list into a string using a separator.
+              Example: "{{ my_list | join(', ') }}"
+
+            - map: Apply a filter to each item of a list and return the list of results.
+              Example: "{{ my_list | map('abs') }}"
+
+            - random: Select a random item from a list.
+              Example: "{{ my_list | random }}"
+
+            - regex_replace: Replace occurrences of a regular expression in a string.
+              Example: "{{ my_string | regex_replace('^prefix', 'replacement') }}"
+
+            - reverse: Reverse the order of a list or a string.
+              Example: "{{ my_list | reverse }}"
+
+            - round: Round a floating-point number to the nearest integer.
+              Example: "{{ my_float | round }}"
+
+            - select: Filter items in a list based on a condition.
+              Example: "{{ my_list | select('even') }}"
+
+            - shuffle: Shuffle the items in a list.
+              Example: "{{ my_list | shuffle }}"
+
+            - slice: Extract a slice of a list.
+              Example: "{{ my_list | slice(1, 3) }}"
+
+            - sort: Sort items in a list.
+              Example: "{{ my_list | sort }}"
+
+            - string: Convert the value to a string.
+              Example: "{{ my_variable | string }}"
+
+            - sum: Calculate the sum of items in a list.
+              Example: "{{ my_list | sum }}"
+
+            - symmetric_difference: Calculate the symmetric difference between two lists.
+              Example: "{{ list1 | symmetric_difference(list2) }}"
+
+            - title: Convert the first character of each word in a string to uppercase.
+              Example: "{{ my_string | title }}"
+
+            - to_datetime: Convert a string to a datetime object.
+              Example: "{{ my_string | to_datetime }}"
+
+            - to_json: Convert a variable to a JSON string.
+              Example: "{{ my_variable | to_json }}"
+
+            - to_yaml: Convert a variable to a YAML string.
+              Example: "{{ my_variable | to_yaml }}"
+
+            - type_debug: Print the data type of a variable.
+              Example: "{{ my_variable | type_debug }}"
+
+            - unique: Remove duplicate items from a list.
+              Example: "{{ my_list | unique }}"
+
+            - urlencode: URL-encode a string.
+              Example: "{{ my_string | urlencode }}"
+
+            - xmlattr: Convert a dictionary to XML attribute format.
+              Example: "{{ my_dict | xmlattr }}"
+
+            # Add more filters with examples similarly...
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Display Filters with Examples (Part 2)
+      debug:
+        msg: |
+          Filters (Part 2):
+            - difference: Calculate the difference between two lists.
+              Example: "{{ list1 | difference(list2) }}"
+
+            - default: Set a default value if a variable is not defined or is undefined.
+              Example: "{{ my_variable | default('default_value') }}"
+
+            - dquote: Surround a string with double quotes.
+              Example: "{{ my_string | dquote }}"
+
+            - dict2items: Convert a dictionary to a list of key-value pairs.
+              Example: "{{ my_dict | dict2items }}"
+
+            - dictsort: Sort a dictionary by key or value.
+              Example: "{{ my_dict | dictsort }}"
+
+            - filesizeformat: Convert a file size (in bytes) to a human-readable format.
+              Example: "{{ file_size | filesizeformat }}"
+
+            - float: Convert the value to a floating-point number.
+              Example: "{{ my_variable | float }}"
+
+            - from_json: Convert a JSON string to a variable.
+              Example: "{{ my_json_string | from_json }}"
+
+            - from_yaml: Convert a YAML string to a variable.
+              Example: "{{ my_yaml_string | from_yaml }}"
+
+            - int: Convert the value to an integer.
+              Example: "{{ my_variable | int }}"
+
+            - ipv4: Check if a string is a valid IPv4 address.
+              Example: "{{ ip_address | ipv4 }}"
+
+            - ipv6: Check if a string is a valid IPv6 address.
+              Example: "{{ ip_address | ipv6 }}"
+
+            - json_query: Extract data from JSON using JMESPath queries.
+              Example: "{{ my_json_data | json_query('path.to.data') }}"
+
+            - last: Get the last item in a list or the last character in a string.
+              Example: "{{ my_list | last }}"
+
+            - length: Get the length of a list, string, or dictionary.
+              Example: "{{ my_list | length }}"
+
+            - lower: Convert a string to lowercase.
+              Example: "{{ my_string | lower }}"
+
+            - max: Get the maximum value from a list of numbers.
+              Example: "{{ my_list | max }}"
+
+            - min: Get the minimum value from a list of numbers.
+              Example: "{{ my_list | min }}"
+
+            - md5: Calculate the MD5 hash of a string.
+              Example: "{{ my_string | md5 }}"
+
+            - regex_escape: Escape special characters in a string for use in regular expressions.
+              Example: "{{ my_string | regex_escape }}"
+
+            - reject: Remove items from a list based on a condition.
+              Example: "{{ my_list | reject('defined') }}"
+
+            - rejectattr: Remove items from a list of dictionaries based on a condition.
+              Example: "{{ users | rejectattr('age', '>=', 18) }}"
+
+            - rejectattr: Remove items from a list of dictionaries based on a condition.
+              Example: "{{ users | rejectattr('age', '>=', 18) }}"
+
+            # Add more filters with examples similarly...
+

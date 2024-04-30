@@ -1,4 +1,5 @@
 ---
+#ansible-doc -t filter --list  ----------> to list the filters
 - name: default value
   hosts: localhost
   tasks:
