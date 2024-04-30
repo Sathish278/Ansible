@@ -80,8 +80,6 @@
             - xmlattr: Convert a dictionary to XML attribute format.
               Example: "{{ {'key': 'value'} | xmlattr }}"
 
-            # Add more filters with examples similarly...
-
     - name: Display Filters with Examples (Part 2)
       debug:
         msg: |
@@ -152,7 +150,6 @@
             - rejectattr: Remove items from a list of dictionaries based on a condition.
               Example: "{{ [{'name': 'Alice', 'age': 20}, {'name': 'Bob', 'age': 30}] | rejectattr('age', '>=', 25) }}"
 
-            # Add more filters with examples similarly...
 - hosts: localhost
   gather_facts: no
   tasks:
@@ -223,4 +220,3 @@
             - xmlattr: Convert a dictionary to XML attribute format.
               Example: "{{ {'key': 'value'} | xmlattr }}"
 
-            # Add more filters with examples similarly...
