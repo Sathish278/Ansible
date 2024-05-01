@@ -1,5 +1,5 @@
 - name: ping servers
-  hosts: localhost
+  hosts: db
   tasks: #list of task/modules/collections
   - name: pinging server
     ansible.builtin.ping:
